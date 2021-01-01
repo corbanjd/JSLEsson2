@@ -36,7 +36,8 @@
     </br>
     var str = "please locate where 'locate' occurs!";
     </br>
-    var pos = str.indexOf ("locate");
+    var pos = str.ind
+    exOf ("locate");
     </br>
     (I'm now going to run this through java. Here's the result in a document.write command: ).
     </br>
@@ -48,5 +49,335 @@
     </script>
     </br>
     </br>
+
+    Both indexOf and lastIndexOf return -1 if the text is not found.
+
+    </br>
+
+    var str = "Please locate me kindly!"
+    var pos = str.lastIndexOf("Please locate me kindly.");
+
+
+    </br>
+
+    (I'm now going to run this through java. Here's the result in a document.write command: ).
+
+    </br>
+    </br>
+    <script>
+        var str = "Please locate me kindly!"
+        var pos = str.lastIndexOf("Please locate me kindly.");
+
+        document.write(pos); 
+    </script>
+
+    </br>
+    </br>
+
+
+    Each method also accepts a second parameter for the starting position of the search.
+
+    var str = "Please locate where 'locate" is kindly.";
+    var position = str.indexOf ("locate", 15);
+
+
+
+    (I'm now going to run this through java. Here's the result in a document.write command: ).
+
+    </br>
+    <script>
+        var str = "Please locate where 'locate' is kindly.";
+        var position = str.indexOf("locate", 15);
+        document.write(position); 
+    </script>
+</body>
+
+
+</br>
+(I'm now going to run this through java. Here's the result in a document.write command: ).
+
+</br>
+</br>
+
+The lastIndexOf method searches backwards.
+</br>
+var str = "Please locate where locate is."
+var pos = str.lastIndexOf ("locate", 15);
+</br>
+<script>
+    var str = "Please locate where locate is."
+    var pos = str.lastIndexOf("locate", 15);
+    document.write(pos); 
+</script>
+</br>
+</br>
+
+search () searches a string for a specified value and returns the position of the match.
+
+var strSearch = "please locate the position of mindful"
+</br>
+var pos = strSearch.search ("mindful");
+</br>
+
+</br>
+(I'm now going to run this through java. Here's the result in a document.write command: ).
+
+
+</br>
+<script>
+    var strSearch = "please locate the position of mindful"
+    var pos = strSearch.search("mindful");
+    document.write(pos); 
+</script>
+</br>
+</br>
+
+Side note: indexOf and str search are the same thing!
+</br>
+Then, we have the slice method. The slice method extracts a part of a string and returns the extracted part in a new
+string.
+</br>
+var str = "Blueberry, Banana, Walnut";
+</br>
+var res = str.slice(7,13);
+</br>
+(I'm now going to run this through java. Here's the result in a document.write command: ).
+
+
+</br>
+<script>
+    var str = "Blueberry, Banana, Walnut";
+    var res = str.slice(7, 13);
+    document.write(res); 
+</script>
+</br>
+</br>
+Omitting the second parameter simply splices out the rest of the string.
+
+</br>
+var str = "Blueberry, Banana, Walnut";
+</br>
+var res = str.slice(7);
+</br>
+Running through JS below:
+<script>
+    var str = "Blueberry, Banana, Walnut";
+    var res = str.slice(7);
+    document.write(res); 
+</script>
+</br>
+</br>
+
+</br>
+let str = "blue berry pies."
+</br>
+let var = str.slice(-12);
+<script>
+    let str = "blue berry pies. and apples and walnuts";
+    let backwards = str.slice(-12);
+    document.write(backwards);
+</script>
+</br>
+</br>
+Substring is similar to slice, but it can't accept negative values.
+</br>
+let str = "pie, cake, apples"
+</br>
+let res = str.substring(7,13);
+</br>
+<script>
+    let str = "pie, cake, apples";
+    let resolution = str.substring(7, 13);
+    document.write(resolution);
+</script>
+</br>
+</br>
+Substr is similar to slice, but the second parameter specifices the lenthg
+of the extracted part.
+</br>
+var str = " apple walnut banana"
+</br>
+var res = str.substr(7, 16);
+</br>
+<script>
+    var str = " apple walnut banana"
+    var res = str.substr(7, 16);
+    document.write(res);
+</script>
+</br>
+</br>
+When you omit the second string, substr simply splices out the rest of the string.
+</br>
+var str = "apple banana walnut"
+</br>
+var res = str.substr(7);
+</br>
+<script>
+    var str = "apple banana walnut"
+    var res = str.substr(7);
+    document.write(res);
+</script>
+</br>
+</br>
+If the first paraemter is negative, then the position simply counts from
+the end of the string.
+</br>
+var str = "apple banana walnut"
+</br>
+var res = str.substr(-4);
+</br>
+<script>
+    var str = "apple banana walnut"
+    var res = str.substr(-4);
+    document.write(res);
+</script>
+</br>
+</br>
+replace() replaces a specified value with another value in string.
+</br>
+str = "Please visit Google";
+</br>
+var b = str.replace("Google", "Corban's Page");
+</br>
+</br>
+<script>
+    str = "Please visit Google";
+    var b = str.replace("Google", "Corban's Page");
+    document.write(b);
+</script>
+</br>
+
+To make it case insnesitive, you use a regular expression with a /i flag.
+</b>
+var str = "Please visit Microsoft";
+</br>
+var n = str.replace(/MICROSOFT/i, "Corban's page.");
+</br>
+<script>
+    var str = "Please visit Microsoft";
+    var n = str.replace(/MICROSOFT/i, "Corban's page.");
+    document.write(n);
+</script>
+</br>
+</br>
+
+To conver to upper case, use toUpperCase();
+</br>
+var text1 = "Hello World!";
+</br>
+var text2 = text1.toUppercase();
+</br>
+
+<script>
+    let text1 = "Hello World!";
+    let text2 = text1.toUppercase();
+    document.write(text2);
+</script>
+</br>
+</br>
+A string is converted to lower case with toLowerCase();
+</br>
+var text1 = "Hello world";
+</br>
+var text2 = text1.toLowerCase();
+</br>
+<script>
+    var text1 = "Hello world";
+    var text2 = text1.toLowerCase();
+    document.write(text2);
+</script>
+</br>
+</br>
+Concat joins two or more strings in a variable.
+</br>
+var text1 = "Hello";
+</br>
+var test2 = "World";
+</br>
+var text3=text1.concat("", text 2);
+<script>
+    var text1 = "Hello";
+    var text2 = "World";
+    var text3 = text1.concat(" ", text2);
+</script>
+</br>
+This is the same as the plus operator.
+</br>
+</br>
+trm() removes white space from a string.
+</br>
+var str = " HEllo world! ";
+</br>
+<script>
+    var str = "       Hello World!        ";
+    document.write(str.trim());
+</script>
+</br>
+</br>
+PadStart and PadEnd also now support padding.
+
+</br>
+let str = "5";
+</br>
+str = str.padStart(4,0);
+</br>
+<script>
+    let str = "5";
+    str = str.padStart(4, 0);
+    document.write(str);
+// result is 0005
+</script>
+</br>
+</br>
+You can extract string characters with charAT, charCodeAt, or Property Access array.
+</br>
+Here is charAt();
+<br>
+var str = "Hello World";
+</br>
+string.charAt(0);
+</br>
+<script>
+    var str = "HELLO WORLD";
+    document.write(str.charAt(0));            // returns H
+</script>
+</br>
+</br>
+Property access does this a little more simply.
+</br>
+var str = "Hello World";
+</br>
+str[0];
+</br>
+<script>
+    var str = "Hello World";
+    document.write(str[0]);
+
+</script>
+</br>
+Note, this is supposedly read-only and a tad unpredictable.
+</br>
+</br>
+To convert a string into an array, we use the split method.
+</br>
+
+var txt = "a,b,c,d,e"; // String
+</br>
+txt.split(","); // Split on commas
+</br>
+
+<script>
+    var txt = "a,b,c,d,e"; // String
+    document.write(txt.split(","));
+</script>
+
+txt.split(" "); // Split on spaces
+txt.split("|"); // Split on pipe
+
+</div>
+
+</body>
+
+
 
 </html>
